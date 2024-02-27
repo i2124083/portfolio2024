@@ -1,9 +1,9 @@
+/*フォント*/
 .kosugi-maru-regular {
   font-family: "Kosugi Maru", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
-
 .kaisei-decol-regular {
   font-family: "Kaisei Decol", serif;
   font-weight: 400;
@@ -86,12 +86,12 @@ details {
   margin: auto;
 }
 
+/*2カラム*/
 .item {
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
-
 .item__text {
   width: 40%;
   height: 50%;
@@ -123,6 +123,7 @@ details {
 .item__photo iframe {
   aspect-ratio: 16 / 9;
   margin-bottom: 16px;
+  border: 0px;
 }
 
 /*ポップアップ画像*/
@@ -142,17 +143,8 @@ details {
 }
 
 summary {
+  list-style: none;
   margin-bottom: -10px;
-}
-
-/*サムネホバー時*/
-summary:hover {
-  cursor: pointer;
-  /* カーソルを指マークに */
-
-}
-
-.list_item {
   max-width: 900px;
   margin: 0 auto;
   /*はみ出た部分を非表示*/
@@ -160,10 +152,51 @@ summary:hover {
   position: relative;
 }
 
+summary img{
+  /*サムネ画像*/
+  width: 900px;
+  transition: all 0.5s ease;
+}
+
+/*サムネホバー時*/
+summary:hover {
+  /* カーソルを指マークに */
+  cursor: pointer;
+
+}
+summary:hover img {
+  /*ホバー時に画像拡大ぼかし*/
+  transform: scale(1.1, 1.1);
+  transition: all 0.8s ease;
+  filter: blur(3px);
+}
+
+/*
 .list_item img {
-  /*サムネ画像サイズ*/
+  transition: all 0.5s ease;
+}
+
+.list_item:hover img {
+  transform: scale(1.1, 1.1);
+  transition: all 0.8s ease;
+  filter: blur(3px);
+}
+*/
+
+/*
+.list_item {
+  max-width: 900px;
+  margin: 0 auto;
+  /*はみ出た部分を非表示*//*
+  overflow: hidden;
+  position: relative;
+}
+
+.list_item img {
+  /*サムネ画像サイズ*//*
   width: 900px;
 }
+*/
 
 /*ホバー時の文字*/
 .title {
@@ -197,16 +230,6 @@ summary:hover {
   opacity: 1;
 }
 
-/*ホバー時に画像拡大ぼかし*/
-.list_item img {
-  transition: all 0.5s ease;
-}
-
-.list_item:hover img {
-  transform: scale(1.1, 1.1);
-  transition: all 0.8s ease;
-  filter: blur(3px);
-}
 
 
 /* オープン時にアニメーション */
@@ -232,30 +255,3 @@ details[open] .c-accordion__content {
   padding: 60px 1em;
   text-align: right;
 }
-
-/*三角クローズボタン
-.c-accordion__text {
--webkit-backface-visibility: hidden;
-backface-visibility: hidden;
-transform: translateZ(0);
-transition: all 0.3s;
-}
-.c-accordion__text {
-border: solid 1px #ccc;
-padding: 1em;
-display: block;
-color: #333;
-font-weight: bold;
-}
-.c-accordion__text::after,
-.c-accordion__text::before {
-content: "";
-position: absolute;
-right: 1.25em;
-top: 1.25em;
-width: 2px;
-height: 0.75em;
-background-color: #999;
-transition: all 0.3s;
-}
-*/
