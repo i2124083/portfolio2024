@@ -121,6 +121,7 @@ summary:hover img {
   /*表示状態）*/
   opacity: 1;
 }
+
 /* オープン時にアニメーション */
 details[open] .c-accordion__content {
   animation: fadeIn 0.8s ease;
