@@ -125,7 +125,6 @@ summary:hover img {
 details[open] .c-accordion__content {
   animation: fadeIn 0.8s ease;
 }
-
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -138,6 +137,7 @@ details[open] .c-accordion__content {
     transform: none;
   }
 }
+
 /*展開時_間隔、背景色など*/
 .c-accordion__content {
   background-color: #FFF;
@@ -167,6 +167,7 @@ details[open] .c-accordion__content {
   flex-direction: row;
   justify-content: center;
 }
+
 /* テキストエリア */
 .item__text {
   width: 45%;
@@ -203,13 +204,17 @@ details[open] .c-accordion__content {
   margin-bottom: 16px;
   border: 0px;
 }
+/*リンクスタイル*/
+.item__photo a {
+  text-decoration-line: underline;
+  color: #3d3b3b;
+}
 
 /*ポップアップ画像*/
 /*枠線消す*/
 #lightbox .lb-container {
    padding: 0px; 
 }
-
 
 .footer{
   margin: 0 auto;
